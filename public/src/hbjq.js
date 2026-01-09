@@ -1,26 +1,25 @@
 $(() => {
 
-    const $texto = $("#texto");
-    const $body = $("#body");
+    const texto = $("#texto");
+    const body = $("#body");
 
     const random = (minimo, maximo) => Math.random() * (maximo - minimo) + minimo;
 
     const cambiar_fondo_suave = color => {
-        $body.css("background-color", color);
+        body.css("background-color", color);
     };
 
     const cambiar_fondo_inmediato = color => {
-        $body.addClass("sin_transicion");
-        $body.css("background-color", color);
+        body.addClass("sin_transicion");
+        body.css("background-color", color);
 
-        // forzar reflow
-        $body[0].offsetHeight;
+        body[0].offsetHeight;
 
-        $body.removeClass("sin_transicion");
+        body.removeClass("sin_transicion");
     };
 
     const cambiar_texto = texto_nuevo => {
-        $texto.text(texto_nuevo);
+        texto.text(texto_nuevo);
     };
 
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -36,7 +35,7 @@ $(() => {
     let inicio = -1;
     let estado = ESTADOS.SIN_EMPEZAR;
 
-    $body.on("click", async function () {
+    body.on("click", async function () {
 
         switch (estado) {
 
@@ -62,7 +61,6 @@ $(() => {
                 break;
 
             case ESTADOS.ESPERANDO_SLEEP:
-                // no hacer nada
                 break;
 
             case ESTADOS.ESPERANDO_CLICK:
