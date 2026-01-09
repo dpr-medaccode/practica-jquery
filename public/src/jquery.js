@@ -1,7 +1,5 @@
-import $ from "jquery"
-
-const gato = "../public/gato.png"
-const leon = "../public/leon.png"
+const gato = "/gato.png"
+const leon = "/leon.png"
 
 let color
 
