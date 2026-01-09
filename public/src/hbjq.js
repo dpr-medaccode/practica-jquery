@@ -35,7 +35,7 @@ $(() => {
     let inicio = -1;
     let estado = ESTADOS.SIN_EMPEZAR;
 
-    body.on("click", async function () {
+    body.on("click", async () => {
 
         switch (estado) {
 
