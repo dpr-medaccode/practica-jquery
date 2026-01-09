@@ -1,7 +1,7 @@
 const elementos = document.querySelector("#elementos")
 
-const gato = "../public/gato.png"
-const leon = "../public/leon.png"
+const gato = "/gato.png"
+const leon = "/leon.png"
 
 const btn_fondo = document.querySelector("#btn_fondo")
 const btn_annadir = document.querySelector("#btn_annadir")
